@@ -1,0 +1,39 @@
+body {
+	background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+	background-size: auto 100vh;
+	font-family: arial;
+	height: 100vh;
+}
+
+.menu {
+	background-image: linear-gradient(to left, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 80%);
+}
+
+.menu ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+.menu li {
+	list-style: none;
+	
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.site-subtitle,
+.site-title {
+	color: whitesmoke;
+	text-align: center;
+}
+
+.site-subtitle {
+	font-style: italic;
+}
