@@ -7,8 +7,9 @@
 body {
 	background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
 	background-size: auto 100vh;
-	font-family: arial;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
+	color: whitesmoke;
 	height: 100vh;
 }
 
@@ -71,13 +72,52 @@ a:hover {
 
 .site-title {
 	font-size: 4em;
+	font-family: 'Source Code Pro', monospace;
 }
 
 .site-subtitle {
 	font-style: italic;
 }
 
+.portfolio {
+	padding: 2em;
+	height: 100vh;
+}
+
+.portfolio h1 {
+	font-family: 'Source Code Pro', monospace;
+	font-size: 2em;
+	
+	margin: 1em;
+}
+
+.portfolio .grid {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	gap: 1em;
+	height: calc(100vh - 10em);
+}
+
+@media (min-width: 765px) {
+	.portfolio .grid {
+		grid-template-columns: 350px 350px;
+	}
+}
+
+@media (min-width: 1135px) {
+	.portfolio .grid {
+		grid-template-columns: repeat(3,350px);
+		height: calc(100vh -10em);
+	}
+}
+
+.portfolio figure {
+	text-align: center;
+}
+
 .img-portfolio{
-	width: 180px;
-	height: auto;
+	width: 240px;
+	height: 180px;
+	object-fit: cover;
 }
