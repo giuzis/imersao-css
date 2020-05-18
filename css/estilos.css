@@ -38,11 +38,18 @@ header {
 	position: fixed;
 	width: 100vw;
 	top:0;
+	z-index: 1;
 }
 
 .menu a {
 	display: block;
 	padding: 20px;
+	transition: background-color, color, 1s;
+}
+
+.menu a:hover{
+	background-color: whitesmoke;
+	color: #fa796b;
 }
 
 .menu ul {
@@ -79,15 +86,16 @@ a:hover {
 	font-style: italic;
 }
 
+.contato,
 .portfolio {
 	padding: 2em;
-	height: 100vh;
+	min-height: 100vh;
 }
 
+.contato h1,
 .portfolio h1 {
 	font-family: 'Source Code Pro', monospace;
 	font-size: 2em;
-	
 	margin: 1em;
 }
 
@@ -96,7 +104,7 @@ a:hover {
 	justify-content: center;
 	align-content: center;
 	gap: 1em;
-	height: calc(100vh - 10em);
+	min-height: calc(100vh - 10em);
 }
 
 @media (min-width: 765px) {
@@ -120,4 +128,25 @@ a:hover {
 	width: 240px;
 	height: 180px;
 	object-fit: cover;
+	transform: scale(1);
+	transition: transform 500ms;
+}
+
+.img-portfolio:hover {
+	transform: scale(1.5);
+}
+
+.contato a {
+	font-size: 4em;
+	transition: text-shadow, 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+	text-decoration: none;
+	text-shadow: 0px 0px 10px whitesmoke;
+}
+
+.contato .icons {
+	text-align: center;
 }
